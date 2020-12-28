@@ -1,3 +1,7 @@
+//Programa para recibir los ángulos pitch, roll y yaw del puerto serie de arduino y 
+//con ellos mover un cubo en 3D. 
+
+
 import processing.serial.*;
 Serial port;
 String data="", acc="", gyro="", fusion="";
