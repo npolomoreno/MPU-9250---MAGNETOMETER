@@ -873,7 +873,7 @@ void calc_quaternion()
     gx * DEG_TO_RAD,   -gy * DEG_TO_RAD,     gz * DEG_TO_RAD,
     my,                -mx,                 -mz);
 
-Serial.println(deltat,4);    
+//Serial.println(deltat,4);    
 }
 
 
@@ -916,12 +916,12 @@ void view_heading_SM(){
 
 // DATA QUE SE ENVIA A PROCESSING
 
-//  Serial.println(int(pitch));
-//  Serial.print("*");
-//  Serial.print(int(roll));
-//  Serial.print("@");
-//  Serial.print(int(heading));
-//  Serial.print(".");
+  Serial.println(int(pitch));
+  Serial.print("*");
+  Serial.print(int(roll));
+  Serial.print("@");
+  Serial.print(int(heading));
+  Serial.print(".");
   count = millis();
 
   sumCount = 0;
