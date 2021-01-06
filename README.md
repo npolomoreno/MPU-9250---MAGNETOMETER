@@ -4,4 +4,6 @@ Calculo de los ángulos pitch Roll y Yaw usando el giroscopio, acelerómetro y m
 
 Los datos obtenidos, son enviados por puerto serie al .pde donde se realiza el movimiento de un cubo tridimensional. 
 
+ ![Screenshot](mpuImage.jpeg) 
+
 npolo. 
