@@ -7,28 +7,50 @@ Serial port;
 String data="", acc="", gyro="", fusion="";
 int index=0, index2=0;
 float Pitch, Roll, Yaw;
+PFont font1,font2;
 
 
 void setup()  {
   printArray(Serial.list());
   port = new Serial(this, Serial.list()[2], 115200);
   port.bufferUntil('.');
-  size(800, 800, P3D);
+  size(900, 900, P3D);
   noStroke();
-  fill(204);
+  fill(200);
+ font1=loadFont("CopperplateGothic-Bold-50.vlw");
+ font2=loadFont("Bauhaus93-80.vlw");
 }
 
 void draw()  {
+  
+  //fill(40,200,255);
+  
+  
   Pitch = float(acc);
   Roll = float(gyro);
   Yaw = float(fusion);
   
+ 
   background(0);
-  lights();
+  textFont(font2,60);
+  text("mpu-9250",300,100);
+  textFont(font2,24);
+  fill(46,168,252);
+  text("ACC, GYRO, MAGNETOMETER",280,150);
+  textFont(font1,20);
+  text("Developed by: npolo",100,800);
+  //lights();
+  lightSpecular(255, 255, 255);
+  directionalLight(204, 204, 204, 0, 0, -1);
+  specular(204, 102, 0);
   translate(width/2, height/2, 0);
   rotateZ(radians(-Pitch));
   rotateX(radians(Roll));
-  box(160); 
+  //rotateY(radians(Yaw));
+  box(200); 
+  
+  
+  
 }
 
 
